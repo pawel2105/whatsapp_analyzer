@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsappAnalyzer</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Karla', :media => "all" %>
+  <%= javascript_include_tag "https://www.google.com/jsapi" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content pure-g-r">
+    <%= render 'shared/header' %>
+    <% if flash.any? %>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+    <% end %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+== Whatsapp analyzer
+
+I doubt anything will work for users that have `:` in their name because of the regex that looks for user names.
+
+There are no tests yet. There was no time for tests. No time I tell you! I doubt I'll add any.
+
+This code is hideous, do not aspire to write code like this.
+
+Do what you want with this code. MIT license I guess.

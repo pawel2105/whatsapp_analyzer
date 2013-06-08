@@ -1,0 +1,10 @@
+<%= javascript_tag do %>
+  var words         = <%= raw @words.as_json %>;
+  var word_one      = <%= raw @chosen_words.as_json[0] %>;
+  var word_two      = <%= raw @chosen_words.as_json[1] %>;
+  var word_three    = <%= raw @chosen_words.as_json[2] %>;
+  //usage over time
+  var swearwords    = <%= raw @swearwords.as_json %>;
+  var most_frequent = <%= raw @most_frequent.as_json %>;
+  var msgs_per_user = <%= raw @msgs_per_user.as_json %>;
+<% end %>

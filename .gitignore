@@ -1,0 +1,9 @@
+/.bundle
+.DS_Store
+.keep
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/.ruby-version
+/.ruby-gemset
+/log/*.log
+/tmp

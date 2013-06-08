@@ -1,0 +1,36 @@
+<div class="content pure-u-1">
+  <div class="pure-g-r content-ribbon">
+    <div class="pure-u-7-8">
+      <div class="l-box">
+
+        Please upload your txt file. Recommended max file size is about 1mb. You can also add 3 words or phrases. You'll be able to see usage graphs about them in the report.<br /><br />
+
+        <%= form_tag stats_path, :multipart => true, class: "pure-form pure-form-aligned" do |f| %>
+          <div class="pure-control-group">
+            <%= label_tag :chat_file, "Conversation .txt file" %>
+            <%= file_field_tag :chat_file %>
+          </div>
+
+          <div class="pure-control-group">
+            <%= label_tag :word_one %>
+            <%= text_field_tag :word_one %>
+          </div>
+
+          <div class="pure-control-group">
+            <%= label_tag :word_two %>
+            <%= text_field_tag :word_two %>
+          </div>
+
+          <div class="pure-control-group">
+            <%= label_tag :word_three %>
+            <%= text_field_tag :word_three %>
+          </div>
+
+          <div class="pure-controls">
+            <button type="submit" class="pure-button notice">Upload</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

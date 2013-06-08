@@ -1,0 +1,79 @@
+<div class="splash pure-u-1">
+  <div class="pure-g-r">
+    <div class="pure-u-1-3">
+      <div class="l-box splash-image">
+        <%= image_tag "cover.png" %>
+      </div>
+    </div>
+
+    <div class="pure-u-2-3">
+      <div class="l-box splash-text">
+        <h1 class="splash-head">
+          The Whatsapp chat analyzer
+        </h1>
+
+        <h2 class="splash-subhead">
+          If you love looking at graphs and you're curious about your messaging habits on Whatsapp, you can upload your chat file here and have your chats broken down into some cool graphs. None of your conversation data is stored and all graphed results live client-side on your browser.
+        </h2>
+
+        <p>
+          <%= link_to "Get started", new_stat_path, class: "pure-button primary-button" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content pure-u-1">
+  <div class="pure-g-r content-ribbon">
+    <div class="pure-u-2-3">
+      <div class="l-box">
+        <h4 class="content-subhead">How to begin</h4>
+
+        <h3>Quick guide to uploading your chat file.</h3>
+        <p>
+          To upload a group chat, go into the group chat and click the info button, scroll down and choose the <b>email conversation</b> button. Be sure to choose "without media". Email the .txt file to yourself and then upload it here.
+        </p>
+
+        <p>
+          To upload a conversation with an individual, go into the conversation and click on the avatar of the person you're chatting to, scroll down and choose the <b>email conversation</b> button. Be sure to choose "without media". Email the .txt file to yourself and then upload it here.
+        </p>
+      </div>
+    </div>
+
+    <div class="pure-u-1-3">
+      <div class="l-box">
+        <%= image_tag "whatsapp.png" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="pure-g-r content-ribbon">
+    <div class="pure-u-1-3">
+      <div class="l-box">
+        <%= image_tag "all_chats_graph.png" %>
+      </div>
+    </div>
+
+    <div class="pure-u-2-3">
+      <div class="l-box">
+        <h4 class="content-subhead">Output full of insight</h4>
+
+        <h3>Several graph types</h3>
+        <p>
+          The Whatsapp analyzer can give you word frequency counts, chat breakdowns per person, temporal usage graphs, swear counters and more!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pure-g-r">
+    <div class="pure-u-1">
+      <div class="l-box ribbon">
+        <h2 class="centered_header">Curious? Try it out.</h2>
+        <%= link_to "Get started", new_stat_path, class: "pure-button primary-button" %>
+      </div>
+    </div>
+  </div>
+
+</div>

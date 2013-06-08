@@ -1,0 +1,85 @@
+<% if @words[0].present? %>
+  <div class="pure-g-r">
+    <div class="pure-u-1-3">
+        <div class="l-box">
+            <h3>"<%= @words[0] %>"</h3>
+            <div id="word_one" class="graph"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-3">
+        <div class="l-box">
+            <h3>"<%= @words[1] %>"</h3>
+            <div id="word_two" class="graph"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-3">
+        <div class="l-box">
+            <h3>"<%= @words[2] %>"</h3>
+            <div id="word_three" class="graph"></div>
+        </div>
+    </div>
+  </div>
+<% else %>
+  <div class="pure-u-1">
+    <div class="l-box">
+      <p class="info">
+        You didn't enter all 3 of your words or phrases.
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<div class="pure-g-r">
+	<h3>Swearword message count per user</h3>
+	<div class="pure-u-1-2">
+    <div class="l-box">
+      <div id="long_swearwords" class="graph long"></div>
+    </div>
+  </div>
+
+  <div class="pure-u-1-2">
+    <div class="l-box">
+      <p>This is the graph representing the swearing count for each user in the chat history. A count is recorded every time a swearword is found in a message, not for every individual swearword.</p>
+      <p>The swearwords checked against are the <%= link_to "seven dirty words", "http://en.wikipedia.org/wiki/Seven_dirty_words" %> as well as a couple other particularly naughty ones.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pure-g-r">
+	<h3>Usage over time for each user</h3>
+	<div class="pure-u-1">
+    <div class="l-box">
+      <div id="time_usage" class="graph long"></div>
+    </div>
+  </div>
+</div>
+
+<div class="pure-g-r">
+  <h3>Most frequent words</h3>
+  <div class="pure-u-1">
+    <div class="l-box">
+      <div id="most_frequent" class="graph long"></div>
+    </div>
+  </div>
+
+  <div class="pure-u-1">
+    <div class="l-box">
+      <p class="info">
+        The <%= link_to "100 most common words", "http://en.wikipedia.org/wiki/Most_common_words_in_English" %> have been excluded from the most frequent words graph. Words like "the" and "it" aren't going to be as exciting to see in this graph. If you see media-omitted in your results, it represents someone uploading an image or video.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="pure-g-r">
+  <div class="pure-u-1-1">
+    <div class="l-box">
+      <h3>Messages per user</h3>
+      <div id="msgs_per_user" class="graph long"></div>
+    </div>
+  </div>
+</div>
+
+<div style="clear:both;"></div>
