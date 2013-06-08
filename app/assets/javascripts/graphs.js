@@ -117,23 +117,6 @@ function drawChart() {
 	var chart = new google.visualization.ColumnChart(document.getElementById('long_swearwords'));
 	chart.draw(swearwords_graph, swearword_options);
 
-	// Usage per user over time
-	var temporal_graph = new google.visualization.DataTable();
-	temporal_graph.addColumn('string', 'User');
-	temporal_graph.addColumn('number', 'Count');
-	temporal_graph.addRows([
-	  ['Week 1', 0],
-	  ['Week 2', 35],
-	  ['Week 3', 13],
-	  ['Week 4', 6],
-	  ['Week 5', 18]
-	]);
-
-	var swearword_options = {'title':'Messages per day', 'legend': 'none'};
-
-	var chart = new google.visualization.LineChart(document.getElementById('time_usage'));
-	chart.draw(temporal_graph, swearword_options);
-
 	// Create the most frequent messages table.
 	var jew_data = new google.visualization.DataTable();
 	jew_data.addColumn('string', 'User');
