@@ -8,6 +8,10 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="<%= request.url %>"/>
+  <meta property="og:title" content="Whatsapp chat analyzer"/>
+  <meta property="og:description" content="An app that lets you analyze your Whataspp conversations."/>
+  <meta property="og:image" content="http://chat-analyzer.herokuapp.com/assets/cover-33d4e39715bc48df94cb8262aaac9d6c.png"/>
 </head>
 <body>
   <div class="content pure-g-r">
