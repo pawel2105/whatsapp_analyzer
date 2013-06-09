@@ -14,5 +14,5 @@ secret = ENV['MYAPP_SECRET']
 if secret.length < 30
   raise "Secret token cannot be loaded"
 else
-  Myapp::Application.config.secret_key_base = secret
+  WhatsappAnalyzer::Application.config.secret_key_base = secret
 end
