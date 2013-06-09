@@ -9,4 +9,10 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-WhatsappAnalyzer::Application.config.secret_key_base = '9872a2a5bd3cf37f29b1d72690975bf1b7aaa330d49ae17e326c438e58c9a2f5ddb7824e68c0a21105edf70c60d1da7870945244823e0cd1e6504a81a296860f'
+
+secret = ENV['MYAPP_SECRET']
+if secret.length < 30
+  raise "Secret token cannot be loaded"
+else
+  Myapp::Application.config.secret_key_base = secret
+end
