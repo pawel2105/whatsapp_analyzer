@@ -11,8 +11,8 @@
 # if you're sharing your code publicly.
 
 secret = ENV['MYAPP_SECRET']
-if secret.length < 30
-  raise "Secret token cannot be loaded"
-else
-  WhatsappAnalyzer::Application.config.secret_key_base = secret
+if Rails.env.development?
+	secret = SecureRandom.hex(64)
 end
+
+WhatsappAnalyzer::Application.config.secret_key_base = secret
