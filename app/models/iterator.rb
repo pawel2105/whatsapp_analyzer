@@ -1,6 +1,7 @@
 class Iterator
   include Users
   include WordCheck
+  include Normalizer
 
   def initialize(file)
     @lines_unedited = file.read
@@ -14,7 +15,7 @@ class Iterator
   def split_file_into_array(string)
     array = []
     string.split("\n").each do |line|
-      array << line
+      array << Engine.normalize(line)
     end
     array
   end
