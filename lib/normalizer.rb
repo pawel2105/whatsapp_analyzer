@@ -26,12 +26,7 @@ module Normalizer
                                  time_array[1].to_i,
                                  time_array[2].to_i)
 
-
-
       better_date = better_date.strftime("%H:%M, %m %b")
-
-      puts "#{better_date} - #{name}: #{msg}"
-
       return_value = "#{better_date} - #{name}: #{msg}"
     end
   end
