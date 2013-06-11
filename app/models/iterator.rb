@@ -15,7 +15,7 @@ class Iterator
   def split_file_into_array(string)
     array = []
     string.split("\n").each do |line|
-      array << Engine.normalize(line)
+      array << Engine.normalize(line) unless line == ""
     end
     array
   end
